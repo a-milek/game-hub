@@ -2,14 +2,14 @@ import { HStack, Image, Text } from "@chakra-ui/react";
 import logo from "../assets/logo.png";
 import { Input } from "@chakra-ui/react";
 import { Switch } from "@chakra-ui/react";
+import { ColorModeSwitch } from "./ColorModeSwitch";
 
 const NavBar = () => {
   return (
-    <HStack>
+    <HStack justifyContent="space-between" padding="10px">
       <Image src={logo} boxSize="60px"></Image>
-
-      <Input placeholder="Search" />
-      <Switch colorScheme="teal" size="lg" />
+      <Input placeholder="Search" width="70%" />
+      <ColorModeSwitch></ColorModeSwitch>
     </HStack>
   );
 };
