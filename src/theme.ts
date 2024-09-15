@@ -9,6 +9,22 @@ const config: ThemeConfig = {
 };
 
 // 3. extend the theme
-const theme = extendTheme({ config });
+const theme = extendTheme({
+  config,
+  colors: {
+    gray: {
+      50: "#f3eefa",
+      100: "#d8cee3",
+      200: "#bdaece",
+      300: "#a28fbb",
+      400: "#886ea7",
+      500: "#6f558e",
+      600: "#56426e",
+      700: "#3e2f4f",
+      800: "#251c31",
+      900: "#0d0814",
+    },
+  },
+});
 
 export default theme;
