@@ -4,7 +4,6 @@ import { GameQuery } from "../App";
 
 export interface Game {
   id: number;
-
   name: string;
   background_image: string;
   parent_platforms: { platform: Platform }[];
@@ -24,6 +23,7 @@ const useGames = (gameQuery: GameQuery) =>
         genres: gameQuery.genre?.id,
         platforms: gameQuery.platform?.id,
         ordering: gameQuery.sortOrder,
+        search: gameQuery.searchText,
       },
     },
     [gameQuery]
