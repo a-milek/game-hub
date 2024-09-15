@@ -11,7 +11,7 @@ export const ColorModeSwitch = () => {
         colorScheme="purple"
         size="lg"
       />
-      <Text>Dark Mode</Text>
+      <Text whiteSpace="nowrap">Dark Mode</Text>
     </HStack>
   );
 };

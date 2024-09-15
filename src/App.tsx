@@ -1,5 +1,5 @@
 import "./App.css";
-import { Grid, GridItem, HStack } from "@chakra-ui/react";
+import { Grid, GridItem, HStack, Show } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
 import GameGrid from "./components/GameGrid";
 import GenreList from "./components/GenreList";
@@ -26,22 +26,23 @@ function App() {
       }}
       templateColumns={{
         base: "1fr",
-        lg: "22% 1fr",
+        lg: "250px 1fr",
       }}
     >
-      <GridItem area={"nav"}>
+      <GridItem area="nav">
         <NavBar />
       </GridItem>
-
-      <GridItem area={"aside"} paddingX={5}>
-        <GenreList
-          selectedGenre={gameQuery.genre}
-          onSelectGenre={(genre) => setGameQuery({ ...gameQuery, genre })}
-        />
-      </GridItem>
+      <Show above="lg">
+        <GridItem area={"aside"} paddingX={5}>
+          <GenreList
+            selectedGenre={gameQuery.genre}
+            onSelectGenre={(genre) => setGameQuery({ ...gameQuery, genre })}
+          />
+        </GridItem>
+      </Show>
 
       <GridItem area={"main"}>
-        <HStack paddingLeft={2} marginBottom={5}>
+        <HStack paddingLeft={2} marginTop={2} marginBottom={2}>
           <PlatformSelector
             selectedPlatform={gameQuery.platform}
             onSelectPlatform={(platform) =>
