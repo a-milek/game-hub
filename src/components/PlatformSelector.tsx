@@ -16,7 +16,7 @@ const PlatformSelector = ({ onSelectPlatform, selectedPlatform }: Props) => {
     <>
       <Menu>
         <MenuButton as={Button} rightIcon={<FaChevronDown />}>
-          {selectedPlatform?.name || "Platform"}
+          {selectedPlatform?.name || "Platforms"}
         </MenuButton>
         <MenuList>
           {data.map((platform) => (
